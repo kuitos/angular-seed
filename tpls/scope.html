@@ -1,0 +1,34 @@
+<!--
+ Created by kui.liu on 2014/06/30 21:32.
+-->
+<!DOCTYPE html>
+<html ng-app="scopeApp">
+<head>
+    <title></title>
+</head>
+<body>
+<div ng-controller="ParentCtrl">
+    ParentCtrl:
+    <br/>
+    parentName: <span ng-bind="parentName"></span>
+    <br/>
+    childName: <span ng-bind="childName"></span>
+    <br/>
+    root: <span ng-bind="root"></span>
+    <div ng-controller="ChildCtrl">
+        ChildCtrl:
+        <br/>
+        parentName: <span ng-bind="parentName"></span>
+        <br/>
+        childName: <span ng-bind="childName"></span>
+        <br/>
+        root: <span ng-bind="root"></span>
+    </div>
+</div>
+
+</body>
+
+<script src="../js/lib/angular/angular.js"></script>
+<script src="../js/scope.js"></script>
+
+</html>

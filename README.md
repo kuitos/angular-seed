@@ -181,4 +181,3 @@ $digest后批量更新UI传统的JS MVC框架, 数据变更是通过setter去触
 这种机制能减少浏览器repaint次数，从而提高性能。
 参考《mastering web application development with angularjs》 P296
 另, 推荐阅读: 构建自己的AngularJS，第一部分：Scope和Digest
-

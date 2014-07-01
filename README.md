@@ -1,7 +1,6 @@
-第一部分  AngularJs 长啥样
+### 第一部分  AngularJs 长啥样
 
-简介：
-AngularJS是建立在这样的信念上的：即声明式编程应该用于构建用户界面以及编写软件构建，而指令式编程非常适合来表示业务逻辑。[1] 框架采用并扩展了传统HTML，通过双向的数据绑定来适应动态内容，双向的数据绑定允许模型和视图之间的自动同步。因此，AngularJS使得对DOM的操作不再重要并提升了可测试性。设计目标：
+#### 简介： AngularJS是建立在这样的信念上的：即声明式编程应该用于构建用户界面以及编写软件构建，而指令式编程非常适合来表示业务逻辑。框架采用并扩展了传统HTML，通过双向的数据绑定来适应动态内容，双向的数据绑定允许模型和视图之间的自动同步。因此，AngularJS使得对DOM的操作不再重要并提升了可测试性。设计目标：
 
 	* 将应用逻辑与对DOM的操作解耦。这会提高代码的可测试性。
 	* 将应用程序的测试看的跟应用程序的编写一样重要。代码的构成方式对测试的难度有巨大的影响。
@@ -18,9 +17,7 @@ Angular遵循软件工程的MVC模式,并鼓励展现，数据，和逻辑组件
 	* MVC  只有数据，没有DOM
 
 
-
-
-1.scope(controller)
+###### 1.scope(controller)
 
      $scope是一个把view（一个DOM元素）连结到controller上的对象。在我们的MVC结构里，这个 $scope 将成为model，它提供一个绑定到DOM元素（以及其子元素）上的excecution context。
 尽管听起来有点复杂，但 $scope 实际上就是一个JavaScript对象，controller和view都可以访问它，所以我们可以利用它在两者间传递信息。在这个 $scope 对象里，我们既存储数据，又存储将要运行在view上的函数。
@@ -30,10 +27,10 @@ Angular遵循软件工程的MVC模式,并鼓励展现，数据，和逻辑组件
 	* scope作用域继承
 
 
-2.serivce
-     service是一个对象，它是AngularJs容器提供的一种服务，使用依赖注入(DI)的方式提供出去。所有的service都是单例的，即只会初始化一次。
+###### 2.serivce
+    service是一个对象，它是AngularJs容器提供的一种服务，使用依赖注入(DI)的方式提供出去。所有的service都是单例的，即只会初始化一次。
 
-     service的五种表现形式
+   service的五种表现形式
 
 	* provider
 	* factory
@@ -41,10 +38,10 @@ Angular遵循软件工程的MVC模式,并鼓励展现，数据，和逻辑组件
 	* constant
 	* value
 
-3.directive
-     指令:即增强的html语义
+###### 3.directive
+    指令:即增强的html语义
 
-     所有的DOM操作封装起来，交由指令单独处理，使DOM操作不影响业务逻辑。
+   所有的DOM操作封装起来，交由指令单独处理，使DOM操作不影响业务逻辑。
 
 
 	* 指令是如何被编译的
@@ -54,19 +51,19 @@ Angular遵循软件工程的MVC模式,并鼓励展现，数据，和逻辑组件
 
      http://blog.jobbole.com/62249/
 
-4.filter
+###### 4.filter
 
-     顾名思义 过滤器
+    顾名思义 过滤器
 
-5.route
+###### 5.route
 
-   angular路由服务  （参见channel-content）
+    angular路由服务  （参见channel-content）
 
-6.resource
+###### 6.resource
 
-   restful api接口设计解决方案 （参见channel-content）
+    restful api接口设计解决方案 （参见channel-content）
 
-第二部分  构建AngularJs Web App
+### 第二部分  构建AngularJs Web App
 
      第一节 kickstart
 
@@ -108,7 +105,7 @@ Angular遵循软件工程的MVC模式,并鼓励展现，数据，和逻辑组件
 
 
 
-第三部分  优化你的AngularJs应用
+### 第三部分  优化你的AngularJs应用
 
 
 	* 使用ng-cloak/ng-bind 避免闪烁 (optimazation.html)
@@ -164,7 +161,7 @@ Angular遵循软件工程的MVC模式,并鼓励展现，数据，和逻辑组件
 
 
 
-画外篇：
+### 画外篇：
 脏数据检查 != 轮询检查更新谈起angular的脏检查机制(dirty-checking), 常见的误解就是认为： ng是定时轮询去检查model是否变更。
 其实，ng只有在指定事件触发后，才进入$digest cycle：
 
@@ -181,3 +178,17 @@ $digest后批量更新UI传统的JS MVC框架, 数据变更是通过setter去触
 这种机制能减少浏览器repaint次数，从而提高性能。
 参考《mastering web application development with angularjs》 P296
 另, 推荐阅读: 构建自己的AngularJS，第一部分：Scope和Digest
+
+### MIT
+  [1]: https://github.com/zensh/jsgen
+  [2]: http://angularjs.cn
+  [3]: https://github.com/
+  [4]: https://github.com/joyent/node
+  [5]: https://github.com/angular/angular.js
+  [6]: https://github.com/mongodb/mongo
+  [7]: https://github.com/twitter/bootstrap
+  [8]: https://github.com/DoubleSpout/rrestjs
+  [9]: https://github.com/kissjs/node-mongoskin
+  [10]: https://github.com/leizongmin/js-xss
+  [11]: http://cnodejs.org/
+  [12]: https://github.com/zensh/jsgen/blob/master/README_en.md

@@ -1,0 +1,37 @@
+<!--
+ Created by kui.liu on 2014/07/02 0:49.
+-->
+<!DOCTYPE html>
+<html ng-app="optimazation">
+<head>
+    <title></title>
+
+    <style>
+        .ng-cloak {
+            display: none !important;
+        }
+    </style>
+
+</head>
+
+<body ng-controller="Ctrl">
+
+    <!--当请求资源与模板渲染间隔超过50ms以上，我们会轻易看到这样的情况-->
+    <div class="ng-cloak">{{text}}</div>
+    <div ng-bind="text"></div>
+
+
+
+    <!--如下，angular不会仅对{{variable}}建立watcher，而是对整个p标签。-->
+    <!--双括号应该被span包裹，因为watch的是外部element-->
+    <p>plain text other {{variable}} plain text other</p>
+    <!--改为:-->
+    <p>plain text other <span ng-bind='variable'></span> plain text other</p>
+    <!--或-->
+    <p>plain text other <span>{{variable}}</span> plain text other</p>
+
+
+</body>
+<script src="../js/lib/angular/angular.js"></script>
+<script src="../js/optimazation.js"></script>
+</html>

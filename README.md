@@ -65,7 +65,7 @@ Angular遵循软件工程的MVC模式,并鼓励展现，数据，和逻辑组件
 
 ### 第二部分  构建AngularJs Web App
 
-     第一节 kickstart
+#####    第一节 kickstart
 
 	1. 基本结构： 从angular-seed开始(recommend)  clone https://github.com/angular/angular-seed
 	2. 入口界面： index.html  （ng-app="app" or angular.bootstrap(document, ['app']);）
@@ -77,7 +77,7 @@ Angular遵循软件工程的MVC模式,并鼓励展现，数据，和逻辑组件
 	8. 其他：       本地化及其他util模块等
 
 
-      第二节  构建更纯粹的Angular应用
+#####   第二节  构建更纯粹的Angular应用
 
 	* 代码层级
 	*

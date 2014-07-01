@@ -7,6 +7,10 @@
 
     angular.module("app", [])
 
+        .controller("AppCtrl", function () {
+
+        })
+
         .directive("setText", function () {
 
             return {
@@ -28,19 +32,22 @@
 
             return {
 
-                restrict: "E",
+                restrict: "AE",
                 require : "?setText",
-                compile: function (element, attr) {
+                compile : function (element, attr) {
 
+                    // do compile,run once, return link function
+                    element.html("<span>hello world</span>");
 
-                    
-                },
-                link: function (scope, element, attr) {
-
-                    
-
+                    return function (scope, element, attr) {
+                        var a = scope.$eval(attr.genDiv);
+                        element.append("&nbsp;<span>" + a + "</span>");
+                    }
 
                 }
+//                link    : function (scope, element, attr) {
+//                    element.html("<span>hello world</span>");
+//                }
 
 
             }

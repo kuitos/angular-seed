@@ -79,21 +79,16 @@ Angular遵循软件工程的MVC模式,并鼓励展现，数据，和逻辑组件
 
 #####   第二节  构建更纯粹的Angular应用
 
-	* 代码层级
+	* 代码
 	*
 		1. scope不是百宝箱也不是垃圾箱， 不要把所有有用的没用的function、object都往上绑定，只绑定view用到的部分
 		2. service、directive、filter分别写在单一文件，禁止杂糅。controller放在同一目录。（参照标准写法）
-		3.
-
-		4. 框架外的处理，使用 angular自带服务，$timeout,$location,$window
-		5.
-
-		6. 一个应用只有一个命名空间，angular面向的只有模块没有全局变量 （angular.module("utils", [])）
+		3. 框架外的处理，使用 angular自带服务，$timeout,$location,$window
+		4. 一个应用只有一个命名空间，angular面向的只有模块没有全局变量 （angular.module("utils", [])）
 
 
 
-
-	* 应用设计层级
+	* 应用设计
 	*
 		1. 注意：所有的service、directive、filter都是单例的!!
 		2. 页面业务逻辑拆分，不同区块使用不同的controller，不要一个page包含一个God似无所不能的controller

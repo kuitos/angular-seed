@@ -126,7 +126,7 @@ Angular遵循软件工程的MVC模式,并鼓励展现，数据，和逻辑组件
 	*
 		* $apply会使ng进入$digest cycle 并从$rootScope开始遍历(深度优先)检查数据变更
 		* $digest仅会检查该scope和它的子scope，当你确定当前操作仅影响它们时，用$digest可以稍微提升性能
-		* $apply前先做$$phase判断。 !$scope.$$phase || $scope.$apply();
+		* $apply前先做$$phase判断。 $scope.$$phase || $scope.$apply();
 
 	* 延迟执行
 	*

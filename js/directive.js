@@ -14,16 +14,13 @@
         .directive("setText", function () {
 
             return {
+                priority: 2,
                 restrict  : "A",
-                require   : "setText",
-                controller: function () {
-
-                    this.setName = function (scope) {
-                        scope.directiveName = "setText";
-                    };
+                compile: function () {
+                    console.log("compile");
                 },
                 link      : function (scope, element, attr, ctrl) {
-                    ctrl.setName(scope);
+                    console.log("link");
                 }
             }
         })
@@ -31,9 +28,8 @@
         .directive("genDiv", function () {
 
             return {
-
+                priority: 1,
                 restrict: "AE",
-                require : "?setText",
                 compile : function (element, attr) {
 
                     // do compile,run once, return link function

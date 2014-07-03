@@ -7,14 +7,16 @@
 
     angular.module("watch", [])
 
-        .controller("WatchCtrl", ["$scope", function ($scope) {
+        .controller("WatchCtrl", ["$scope","$rootScope", function ($scope,$rootScope) {
 
             var i;
             $scope.array = [];
 
-            for (i = 0; i < 5001; i++) {
+            for (i = 0; i < 2000; i++) {
                 $scope.array.push(i);
             }
+
+            console.log($rootScope);
         }]);
 
 })(window.angular);

@@ -1,0 +1,21 @@
+<!--
+ Created by kui.liu on 2014/07/03 13:51.
+-->
+<!DOCTYPE html>
+<html ng-app="watch">
+<head>
+    <title></title>
+</head>
+<body ng-controller="WatchCtrl">
+
+<ul>
+    <li ng-repeat="a in array track by $index">
+        <span ng-bind="a"></span><input type="text" ng-model="a"/>
+    </li>
+</ul>
+
+
+<script src="../js/lib/angular/angular.js"></script>
+<script src="../js/watch.js"></script>
+</body>
+</html>

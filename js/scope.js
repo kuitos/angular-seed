@@ -8,6 +8,7 @@
     angular.module("scopeApp", [])
         .controller("ParentCtrl", ["$scope", function ($scope) {
 
+
             $scope.parentName = "parent scope";
 
         }])
